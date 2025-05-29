@@ -38,5 +38,5 @@ app.post('/api/groups', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server http://localhost:${PORT} da ishlayapti`);
+    console.log(`Server https://chat-frontend.github.io/chat-frontend/:${PORT} da ishlayapti`);
 });

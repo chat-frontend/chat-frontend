@@ -17,39 +17,3 @@
     </div>
 </body>
 </html> 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Guruh yaratish</title>
-</head>
-<body>
-
-  <h1>Yangi Guruh Yaratish</h1>
-  <input type="text" id="groupName" placeholder="Guruh nomi" />
-  <button onclick="createGroup()">Guruh yaratish</button>
-
-  <script>
-    function createGroup() {
-      const name = document.getElementById("groupName").value;
-
-      fetch("http://localhost:3000/api/groups", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ name })
-      })
-      .then(res => res.json())
-      .then(data => {
-        alert("✅ Guruh yaratildi: " + data.name);
-      })
-      .catch(error => {
-        console.error("Xatolik:", error);
-        alert("❌ Guruh yaratishda xatolik!");
-      });
-    }
-  </script>
-
-</body>
-</html>
